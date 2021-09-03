@@ -19,8 +19,9 @@ class CreateCarsTable extends Migration
             $table->string('model');
             $table->string('color');
             $table->integer('year');
-            $table->text('other_details');
+            $table->text('other_details')->nullable();
             $table->enum('status',['sold','unsold'])->default('unsold');
+            $table->date('sold_date')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

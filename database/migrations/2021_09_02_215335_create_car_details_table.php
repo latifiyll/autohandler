@@ -17,8 +17,8 @@ class CreateCarDetailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('car_id');
             $table->double('bought',15,2);
-            $table->double('other_expenses',15,2);
-            $table->double('sold',15,2);
+            $table->double('other_expenses',15,2)->default(0);
+            $table->double('sold',15,2)->default(0);
             $table->timestamps();
         });
     }
